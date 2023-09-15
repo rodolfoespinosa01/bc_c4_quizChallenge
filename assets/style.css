@@ -1,0 +1,64 @@
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: magenta;
+}
+
+.section_center {
+  display: flex;
+  padding: 60px;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* GLOBAL CLASSES */
+
+
+/* Intro: Coding Quiz Challenge */
+
+#intro_start h1,
+#intro_start h2,
+main p {
+  padding: 20px;
+
+}
+
+#intro_start button {
+  padding: 10px;
+  background-color: rgb(64, 8, 177);
+  color: white;
+  border-radius: 30px;
+}
+
+/* Question Layout */
+
+#question_text {
+  padding: 20px;
+}
+
+#question_section button {
+
+  padding: 10px;
+  background-color: rgb(64, 8, 177);
+  color: white;
+  border-radius: 30px;
+}
+
+#question_section {
+  align-items: left;
+}
