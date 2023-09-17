@@ -32,8 +32,7 @@ header {
 /* Intro: Coding Quiz Challenge */
 
 #intro_start h1,
-#intro_start h2,
-main p {
+#intro_start h2 {
   padding: 20px;
 
 }
@@ -45,10 +44,17 @@ main p {
   border-radius: 30px;
 }
 
+#intro_start button:hover {
+  background-color: white;
+  color: black;
+}
+
 /* Question Layout */
 
 #question_text {
   padding: 20px;
+  font-size: 40px;
+
 }
 
 #question_section button {
@@ -59,6 +65,43 @@ main p {
   border-radius: 30px;
 }
 
+#question_section button:hover {
+  background-color: white;
+  color: black;
+}
+
 #question_section {
-  align-items: left;
+  align-items: start;
+}
+
+button {
+  font-size: 20px;
+  margin: 6px;
+}
+
+#gameOver {
+  font-size: 100px;
+  color: red;
+  background-color: black;
+}
+
+#input_initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  color: grey;
+}
+
+form button {
+  padding: 10px;
+  background-color: rgb(64, 8, 177);
+  color: white;
+  border-radius: 10px;
+}
+
+form button:hover {
+  background-color: white;
+  color: black;
 }
