@@ -120,3 +120,5 @@ intro_start_button.addEventListener('click', function () {
     startQuiz();
   }
 });
+
+

@@ -49,6 +49,7 @@ function gameOver() {
 
 
   function addScore(eventObj) {
+
     eventObj.preventDefault();
 
 
@@ -75,6 +76,8 @@ function gameOver() {
 
 function showScores() {
 
+  main_el.innerHTML = '';
+
   var section2 = document.createElement("section");
   section2.classList.add("section_center");
   main_el.appendChild(section2);
@@ -98,11 +101,6 @@ function showScores() {
     liNew.innerText = scoreObj.initials + ' has a score of: ' + scoreObj.finalScore + '/50';
     olEl.appendChild(liNew);
 
-
-
-
-
-
   });
 
 
@@ -118,6 +116,15 @@ function showScores() {
   var clearhsBTN = document.createElement('button');
   clearhsBTN.textContent = "Clear High Scores";
   div.appendChild(clearhsBTN);
+
+  gobackBTN.addEventListener('click', function () {
+    window.location.href = './index.html';
+
+
+  });
+  clearhsBTN.addEventListener('click', function () {
+    localStorage.clear();
+  })
 
 
 }
