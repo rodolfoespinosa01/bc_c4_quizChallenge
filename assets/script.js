@@ -5,7 +5,7 @@ function setTime() {
     secondsLeft--;
     countdown_timer.textContent = secondsLeft;
 
-    if (secondsLeft === 0 || questionsIndex > 4) {
+    if (secondsLeft <= 0 || questionsIndex > 4) {
       clearInterval(timerInterval);
 
       gameOver();

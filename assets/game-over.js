@@ -124,6 +124,7 @@ function showScores() {
   });
   clearhsBTN.addEventListener('click', function () {
     localStorage.clear();
+    showScores();
   })
 
 
