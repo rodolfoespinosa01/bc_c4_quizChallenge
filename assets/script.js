@@ -44,65 +44,79 @@ function startQuiz() {
 
 };
 
+
+
+function removeIdAttribute() {
+  listEl.forEach(function (e) {
+    e.removeAttribute('id');
+  });
+};
+
+
+
 li1.addEventListener('click', function () {
   if (li1.id !== "correct_answer") {
     secondsLeft -= 10;
-
+    removeIdAttribute()
     questionsIndex++;
     startQuiz();
   } else {
     currentScore = currentScore + 10;
     questionsIndex++;
+    removeIdAttribute()
     startQuiz();
   }
-})
+});
 
 li2.addEventListener('click', function () {
   if (li2.id !== "correct_answer") {
     secondsLeft -= 10;
-
+    removeIdAttribute()
     questionsIndex++;
     startQuiz();
   } else {
     currentScore = currentScore + 10;
     questionsIndex++;
+    removeIdAttribute()
     startQuiz();
   }
-})
+});
 li3.addEventListener('click', function () {
   if (li3.id !== "correct_answer") {
     secondsLeft -= 10;
-
+    removeIdAttribute()
     questionsIndex++;
     startQuiz();
   } else {
     currentScore = currentScore + 10;
     questionsIndex++;
+    removeIdAttribute()
     startQuiz();
   }
-})
+});
 
 li4.addEventListener('click', function () {
   if (li4.id !== "correct_answer") {
     secondsLeft -= 10;
-
+    removeIdAttribute()
     questionsIndex++;
     startQuiz();
   } else {
     currentScore = currentScore + 10;
     questionsIndex++;
+    removeIdAttribute()
     startQuiz();
   }
-
-})
-
-
-
-intro_start_button.addEventListener('click', function () {
-  setTime();
-  startQuiz();
 
 });
 
 
+var quizStarted = false;
 
+intro_start_button.addEventListener('click', function () {
+  if (!quizStarted) {
+    setTime();
+    quizStarted = true;
+    startQuiz();
+  }
+});

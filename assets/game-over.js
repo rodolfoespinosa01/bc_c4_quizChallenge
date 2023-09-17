@@ -1,10 +1,13 @@
 
+function getScores() {
+  return JSON.parse(localStorage.getItem('scores')) || [];
+}
 
 function gameOver() {
 
   main_el.innerHTML = '';
+  header.innerHTML = '';
   var section2 = document.createElement("section");
-  section2
   section2.classList.add("section_center");
   main_el.appendChild(section2);
   var gameOver = document.createElement('p')
@@ -18,7 +21,7 @@ function gameOver() {
 
   var finalScore = document.createElement("p");
   section2.appendChild(finalScore);
-  finalScore.textContent = "Your final Score is: " + currentScore;
+  finalScore.textContent = "Your final Score is: " + currentScore + '/50';
 
   var form = document.createElement("form");
   section2.appendChild(form);
@@ -42,9 +45,6 @@ function gameOver() {
 
 
 
-  function getScores() {
-    return JSON.parse(localStorage.getItem('scores')) || [];
-  }
 
 
 
@@ -67,10 +67,62 @@ function gameOver() {
     localStorage.setItem('scores', JSON.stringify(scores));
 
     input_box.value = '';
+
+    showScores();
   };
 
-
 };
+
+function showScores() {
+
+  var section2 = document.createElement("section");
+  section2.classList.add("section_center");
+  main_el.appendChild(section2);
+
+
+  var hsText = document.createElement('h1');
+  hsText.textContent = "All Scores";
+  section2.appendChild(hsText);
+
+  var olEl = document.createElement('ol');
+  section2.appendChild(olEl);
+
+  var scores = getScores();
+  if (scores.length) {
+    scores.innerHTML = '';
+  }
+
+  scores.forEach(function (scoreObj) {
+    var liNew = document.createElement('li');
+
+    liNew.innerText = scoreObj.initials + ' has a score of: ' + scoreObj.finalScore + '/50';
+    olEl.appendChild(liNew);
+
+
+
+
+
+
+  });
+
+
+  var div = document.createElement('div');
+  section2.appendChild(div);
+  div.id = "lastButtons"
+
+  var gobackBTN = document.createElement('button');
+  gobackBTN.textContent = "Go Back";
+  div.appendChild(gobackBTN);
+
+
+  var clearhsBTN = document.createElement('button');
+  clearhsBTN.textContent = "Clear High Scores";
+  div.appendChild(clearhsBTN);
+
+
+}
+
+
 
 
 

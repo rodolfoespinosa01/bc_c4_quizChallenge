@@ -23,7 +23,7 @@ section1.classList.add("section_center");
 view_hs.textContent = "View high scores";
 time_text.textContent = "Time:";
 intro_start_title.textContent = "Coding Quiz Challenge";
-intro_start_description.textContent = "Try to answer the next 5 questions within the time limit. If you submit a wrong answer your time will be deducted by 10seconds!";
+intro_start_description.textContent = "Try to answer the next 5 questions within the time limit. You will get a total of 10 points for every question you answer. If you submit a wrong answer your time will be deducted by 10seconds!";
 intro_start_button.textContent = "Start Quiz";
 
 body.appendChild(header);

@@ -37,14 +37,16 @@ header {
 
 }
 
-#intro_start button {
+#intro_start button,
+#lastButtons button {
   padding: 10px;
   background-color: rgb(64, 8, 177);
   color: white;
   border-radius: 30px;
 }
 
-#intro_start button:hover {
+#intro_start button:hover,
+#lastButtons button:hover {
   background-color: white;
   color: black;
 }
