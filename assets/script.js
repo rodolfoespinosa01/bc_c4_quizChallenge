@@ -122,3 +122,8 @@ intro_start_button.addEventListener('click', function () {
 });
 
 
+view_hs.addEventListener('click', function () {
+  header.innerHTML = '';
+  showScores();
+})
+

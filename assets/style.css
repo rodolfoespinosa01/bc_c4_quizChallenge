@@ -28,6 +28,10 @@ header {
 
 /* GLOBAL CLASSES */
 
+header p:first-child {
+  cursor: pointer;
+}
+
 
 /* Intro: Coding Quiz Challenge */
 
