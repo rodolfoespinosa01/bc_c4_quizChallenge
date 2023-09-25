@@ -16,4 +16,4 @@ https://github.com/rodolfoespinosa01/bc_c4_quizChallenge/
 
 #### SCREENSHOT OF WEBSITE BELOW
 
-![Alt text](<Screenshot 2023-09-17 at 10.13.35 AM.png>) ![Alt text](<Screenshot 2023-09-17 at 10.13.45 AM.png>) ![Alt text](<Screenshot 2023-09-17 at 10.13.57 AM.png>) ![Alt text](<Screenshot 2023-09-17 at 10.14.08 AM.png>) ![Alt text](<Screenshot 2023-09-17 at 10.16.19 AM.png>) ![Alt text](<Screenshot 2023-09-17 at 10.16.27 AM.png>)
+![Alt text](<assets/img/Screenshot 2023-09-17 at 10.13.35 AM.png>) ![Alt text](<assets/img/Screenshot 2023-09-17 at 10.13.45 AM.png>) ![Alt text](<assets/img/Screenshot 2023-09-17 at 10.13.57 AM.png>) ![Alt text](<assets/img/Screenshot 2023-09-17 at 10.14.08 AM.png>) ![Alt text](<assets/img/Screenshot 2023-09-17 at 10.16.19 AM.png>) ![Alt text](<assets/img/Screenshot 2023-09-17 at 10.16.27 AM.png>)

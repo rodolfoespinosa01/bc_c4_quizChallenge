@@ -1,8 +1,10 @@
 
+// Get scores from the localStorage and parse to be able to use in JS code
 function getScores() {
   return JSON.parse(localStorage.getItem('scores')) || [];
 }
 
+// This function will run from the script JS file. 2 scenarios, if the timer runs out or if the user has finished the quiz. It is intended to clear the page and setup the GameOver view for the user (including initials submission with final score). 
 function gameOver() {
 
   main_el.innerHTML = '';
@@ -44,18 +46,12 @@ function gameOver() {
   scoreForm.addEventListener('submit', addScore);
 
 
-
-
-
-
+  // Once page is set up from above code, this function will run to add score to localStorage
   function addScore(eventObj) {
 
     eventObj.preventDefault();
 
-
-    var nameInput = document.querySelector("#inputName");
-
-
+    // Create object to store in localStorage
     var scoreObject = {
       initials: input_box.value,
       finalScore: currentScore
@@ -63,6 +59,7 @@ function gameOver() {
 
     var scores = getScores();
 
+    // Adds current scores to Object, store in localStorage, empty input text box once user hits submit, then call showScore function
     scores.push(scoreObject);
 
     localStorage.setItem('scores', JSON.stringify(scores));
@@ -74,6 +71,8 @@ function gameOver() {
 
 };
 
+
+// This function is called once user submits new scores. It is intended to clear page, and setup new elements for score display
 function showScores() {
 
   main_el.innerHTML = '';
@@ -95,6 +94,7 @@ function showScores() {
     scores.innerHTML = '';
   }
 
+  // for each score in the localStorage, add to an li elements and list for user to see past record
   scores.forEach(function (scoreObj) {
     var liNew = document.createElement('li');
 
@@ -104,6 +104,7 @@ function showScores() {
   });
 
 
+  // give two options to user to go back to main screen or clear score by clearing the localStorage
   var div = document.createElement('div');
   section2.appendChild(div);
   div.id = "lastButtons"

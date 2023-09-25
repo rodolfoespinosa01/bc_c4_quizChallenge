@@ -1,3 +1,4 @@
+// Document Set up page
 var body = document.body;
 var header = document.createElement("header");
 var view_hs = document.createElement("p");
